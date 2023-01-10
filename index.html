@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="ActiveBox">
+    <meta name="keywords" content="ActiveBox">
+    <meta name="google" content="notranslate">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:ital@1&family=Open+Sans:wght@700&family=Raleway:ital,wght@0,300;0,400;0,600;0,700;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+
+     <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+    <link rel="manifest" href="img/favicons/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <title>ActiveBox</title>
+</head>
+<body>
+
+<!-------- Sprite -------->
+<svg style="display: none;">
+    <symbol id="facebook" viewBox="0 0 430.113 430.114">
+        <g>
+            <path d="M158.081,83.3c0,10.839,0,59.218,0,59.218h-43.385v72.412h43.385v215.183h89.122V214.936h59.805
+            c0,0,5.601-34.721,8.316-72.685c-7.784,0-67.784,0-67.784,0s0-42.127,0-49.511c0-7.4,9.717-17.354,19.321-17.354
+            c9.586,0,29.818,0,48.557,0c0-9.859,0-43.924,0-75.385c-25.016,0-53.476,0-66.021,0C155.878-0.004,158.081,72.48,158.081,83.3z"/>
+        </g>
+    </symbol>
+
+    <symbol id="twitter" viewBox="0 0 512.002 512.002">
+        <g>
+            <path d="M500.398,94.784c-8.043,3.567-16.313,6.578-24.763,9.023c10.004-11.314,17.631-24.626,22.287-39.193
+            c1.044-3.265-0.038-6.839-2.722-8.975c-2.681-2.137-6.405-2.393-9.356-0.644c-17.945,10.643-37.305,18.292-57.605,22.764
+            c-20.449-19.981-48.222-31.353-76.934-31.353c-60.606,0-109.913,49.306-109.913,109.91c0,4.773,0.302,9.52,0.9,14.201
+            c-75.206-6.603-145.124-43.568-193.136-102.463c-1.711-2.099-4.347-3.231-7.046-3.014c-2.7,0.211-5.127,1.734-6.491,4.075
+            c-9.738,16.709-14.886,35.82-14.886,55.265c0,26.484,9.455,51.611,26.158,71.246c-5.079-1.759-10.007-3.957-14.711-6.568
+            c-2.525-1.406-5.607-1.384-8.116,0.054c-2.51,1.439-4.084,4.084-4.151,6.976c-0.012,0.487-0.012,0.974-0.012,1.468
+            c0,39.531,21.276,75.122,53.805,94.52c-2.795-0.279-5.587-0.684-8.362-1.214c-2.861-0.547-5.802,0.456-7.731,2.638
+            c-1.932,2.18-2.572,5.219-1.681,7.994c12.04,37.591,43.039,65.24,80.514,73.67c-31.082,19.468-66.626,29.665-103.939,29.665
+            c-7.786,0-15.616-0.457-23.279-1.364c-3.807-0.453-7.447,1.795-8.744,5.416c-1.297,3.622,0.078,7.66,3.316,9.736
+            c47.935,30.735,103.361,46.98,160.284,46.98c111.903,0,181.907-52.769,220.926-97.037c48.657-55.199,76.562-128.261,76.562-200.451
+            c0-3.016-0.046-6.061-0.139-9.097c19.197-14.463,35.724-31.967,49.173-52.085c2.043-3.055,1.822-7.094-0.545-9.906
+            C507.7,94.204,503.76,93.294,500.398,94.784z"/>
+        </g>
+    </symbol>
+
+    <symbol id="linkedin"  viewBox="0 0 310 310">
+        <g>
+            <path d="M72.16,99.73H9.927c-2.762,0-5,2.239-5,5v199.928c0,2.762,2.238,5,5,5H72.16c2.762,0,5-2.238,5-5V104.73
+            C77.16,101.969,74.922,99.73,72.16,99.73z"/>
+            <path d="M41.066,0.341C18.422,0.341,0,18.743,0,41.362C0,63.991,18.422,82.4,41.066,82.4
+            c22.626,0,41.033-18.41,41.033-41.038C82.1,18.743,63.692,0.341,41.066,0.341z"/>
+            <path d="M230.454,94.761c-24.995,0-43.472,10.745-54.679,22.954V104.73c0-2.761-2.238-5-5-5h-59.599
+            c-2.762,0-5,2.239-5,5v199.928c0,2.762,2.238,5,5,5h62.097c2.762,0,5-2.238,5-5v-98.918c0-33.333,9.054-46.319,32.29-46.319  c25.306,0,27.317,20.818,27.317,48.034v97.204c0,2.762,2.238,5,5,5H305c2.762,0,5-2.238,5-5V194.995
+            C310,145.43,300.549,94.761,230.454,94.761z"/>
+        </g>
+    </symbol>
+</svg>
+
+
+<!---------------------------- Header ------------------------------------------->
+<header class="header" id="header">
+    <div class="container">
+          <div class="header__inner">
+              <div class="header__logo">
+                  <img src="img/activebox-logo.png" alt="Logo">
+               </div>
+
+              <nav class="nav" id="nav">
+                <a class="nav__link" href="#" data-scroll="#features">Featurs</a>
+                <a class="nav__link" href="#" data-scroll="#works">Works</a>
+                <a class="nav__link" href="#" data-scroll="#team">Our Team</a>
+                <a class="nav__link" href="#" data-scroll="#reviews">Testimonials</a>
+                <a class="nav__link" href="#" data-scroll="#download">Download</a>
+             </nav>
+
+             <button class="burger" type="button" id="navToggle">
+                 <span class="burger__item">Menu</span>
+             </button>
+
+
+         </div>
+    </div>
+</header>
+
+
+<!----------------------------- Intro ------------------------------------------->
+<div class="intro" id="intro">
+    <div class="container">
+        <div class="intro__inner">
+            <h1 class="intro__title">Your Favorite One Page Multi Purpose Template</h1>
+            <p class="intro__subtitle">Lorem Ipsum является текст-заполнитель обычно используется в графических, печать и издательской индустрии для предварительного просмотра макета и визуальных макетах.</p>
+            <a class="btn btn--red" href="#">Find Out More</a>
+        </div>
+
+    </div>
+</div>
+
+
+<!---------------------------- Features ------------------------------------------->
+<div class="container" id="features">
+    <div class="features">
+        <div class="features__item">
+            <img class="features__icon" src="img/features/feature-1.png" alt="icon">
+            <h4 class="features__title">Easily Customised</h4>
+            <div class="features__text">Lorem Ipsum является текст-заполнитель обычно используется в графических, печать и издательской индустрии для..</div>
+        </div>
+
+        <div class="features__item">
+            <img class="features__icon" src="img/features/feature-2.png" alt="icon">
+            <h4 class="features__title">Responsive Ready</h4>
+            <div class="features__text">Lorem Ipsum является текст-заполнитель обычно используется в графических, печать и издательской индустрии для ..</div>
+        </div>
+
+        <div class="features__item">
+            <img class="features__icon" src="img/features/feature-3.png" alt="icon">
+            <h4 class="features__title">Modern disign</h4>
+            <div class="features__text">Lorem Ipsum является текст-заполнитель обычно используется в графических, печать и издательской индустрии для ..</div>
+        </div>
+
+        <div class="features__item">
+            <img class="features__icon" src="img/features/feature-4.png" alt="icon">
+            <h4 class="features__title">Clean code</h4>
+            <div class="features__text">Lorem Ipsum является текст-заполнитель обычно используется в графических, печать и издательской индустрии для ..</div>
+        </div>
+
+        <div class="features__item">
+            <img class="features__icon" src="img/features/feature-5.png" alt="icon">
+            <h4 class="features__title">Ready to ship</h4>
+            <div class="features__text">Lorem Ipsum является текст-заполнитель обычно используется в графических, печать и издательской индустрии для ..</div>
+        </div>
+
+        <div class="features__item">
+            <img class="features__icon" src="img/features/feature-6.png" alt="icon">
+            <h4 class="features__title">Download for free</h4>
+            <div class="features__text">Lorem Ipsum является текст-заполнитель обычно используется в графических, печать и издательской индустрии для ..</div>
+        </div>
+
+    </div> <!-- Features -->
+</div> <!-- Container -->
+
+
+<!---------------------------- Works ------------------------------------------->
+<div class="works" id="works">
+    <div class="works__item">
+        <img class="works__img" src="img/works/work-1.jpg" alt="work">
+        <div class="works__content">
+            <div class="works__title">Project name</div>
+            <div class="works__text">User interface design</div>
+        </div>
+    </div>
+
+    <div class="works__item">
+        <img class="works__img" src="img/works/work-2.jpg" alt="work">
+        <div class="works__content">
+            <div class="works__title">Project name</div>
+            <div class="works__text">User interface design</div>
+        </div>
+    </div>
+
+    <div class="works__item">
+        <img class="works__img" src="img/works/work-3.jpg" alt="work">
+        <div class="works__content">
+            <div class="works__title">Project name</div>
+            <div class="works__text">User interface design</div>
+        </div>
+    </div>
+
+    <div class="works__item">
+        <img class="works__img" src="img/works/work-4.jpg" alt="work">
+        <div class="works__content">
+            <div class="works__title">Project name</div>
+            <div class="works__text">User interface design</div>
+        </div>
+    </div>
+
+    <div class="works__item">
+        <img class="works__img" src="img/works/work-5.jpg" alt="work">
+        <div class="works__content">
+            <div class="works__title">Project name</div>
+            <div class="works__text">User interface design</div>
+        </div>
+    </div>
+
+    <div class="works__item">
+        <img class="works__img" src="img/works/work-6.jpg" alt="work">
+        <div class="works__content">
+            <div class="works__title">Project name</div>
+            <div class="works__text">User interface design</div>
+        </div>
+    </div>
+
+    <div class="works__item">
+        <img class="works__img" src="img/works/work-7.jpg" alt="work">
+        <div class="works__content">
+            <div class="works__title">Project name</div>
+            <div class="works__text">User interface design</div>
+        </div>
+    </div>
+
+    <div class="works__item">
+        <img class="works__img" src="img/works/work-8.jpg" alt="work">
+        <div class="works__content">
+            <div class="works__title">Project name</div>
+            <div class="works__text">User interface design</div>
+        </div>
+    </div>
+
+</div> <!-- Works -->
+
+
+<!---------------------------- Team ------------------------------------------->
+<div class="team" id="team">
+    <div class="container">
+        <div class="team__inner">
+
+            <div class="team__item">
+                <img class="team__photo" src="img/team/team-1.jpg" alt="team">
+                <div class="team__name">Ruth Woods</div>
+                <div class="team__prof">Founder, CEO</div>
+                <div class="team__text">
+                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+                </div>
+                <div class="social">
+                    <a class="social__item" href="#" target="_blank">
+                        <svg class="social__icon">
+                            <use xlink:href="#facebook"></use>
+                        </svg>
+                    </a>
+
+                    <a class="social__item" href="#" target="_blank">
+                        <svg class="social__icon">
+                            <use xlink:href="#twitter"></use>
+                        </svg>
+                    </a>
+
+                    <a class="social__item" href="#" target="_blank">
+                        <svg class="social__icon">
+                            <use xlink:href="#linkedin"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="team__item">
+                <img class="team__photo" src="img/team/team-2.jpg" alt="team">
+                <div class="team__name">Timothy Reed</div>
+                <div class="team__prof">Co-founder, developer</div>
+                <div class="team__text">
+                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+                </div>
+                <div class="social">
+                    <a class="social__item" href="#" target="_blank">
+                        <svg class="social__icon">
+                            <use xlink:href="#facebook"></use>
+                        </svg>
+                    </a>
+
+                    <a class="social__item" href="#" target="_blank">
+                        <svg class="social__icon">
+                            <use xlink:href="#twitter"></use>
+                        </svg>
+                    </a>
+
+                    <a class="social__item" href="#" target="_blank">
+                        <svg class="social__icon">
+                            <use xlink:href="#linkedin"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="team__item">
+                <img class="team__photo" src="img/team/team-3.jpg" alt="team">
+                <div class="team__name">Viktoria Valdez</div>
+                <div class="team__prof">Ui desinger</div>
+                <div class="team__text">
+                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+                </div>
+                <div class="social">
+                    <a class="social__item" href="#" target="_blank">
+                        <svg class="social__icon">
+                            <use xlink:href="#facebook"></use>
+                        </svg>
+                    </a>
+
+                    <a class="social__item" href="#" target="_blank">
+                        <svg class="social__icon">
+                            <use xlink:href="#twitter"></use>
+                        </svg>
+                    </a>
+
+                    <a class="social__item" href="#" target="_blank">
+                        <svg class="social__icon">
+                            <use xlink:href="#linkedin"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="team__item">
+                <img class="team__photo" src="img/team/team-4.jpg" alt="team">
+                <div class="team__name">Beverly Little</div>
+                <div class="team__prof">Data Scientist</div>
+                <div class="team__text">
+                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+                </div>
+                <div class="social">
+                    <a class="social__item" href="#" target="_blank">
+                        <svg class="social__icon">
+                            <use xlink:href="#facebook"></use>
+                        </svg>
+                    </a>
+
+                    <a class="social__item" href="#" target="_blank">
+                        <svg class="social__icon">
+                            <use xlink:href="#twitter"></use>
+                        </svg>
+                    </a>
+
+                    <a class="social__item" href="#" target="_blank">
+                        <svg class="social__icon">
+                            <use xlink:href="#linkedin"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+        </div> <!-- Team__inner -->
+    </div> <!-- Container -->
+</div> <!-- Team -->
+
+
+<!---------------------------- Reviews ---------------------------------------->
+<div class="reviews" id="reviews">
+    <div class="container">
+
+        <div class="swiper" >
+
+            <div class="swiper-wrapper">
+                <div class="swiper-slide ">
+                    <div class="reviews__item">
+                    <div class="reviews__photo">
+                        <img class="reviews__img" src="img/reviews/review-1.jpg" alt="">
+                    </div>
+                    <div class="reviews__content">
+                        <div class="reviews__text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</div>
+                        <div class="reviews__author">Susan Sims, Interaction Designer at XYZ</div>
+                    </div>
+                   </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="reviews__item">
+
+                    <div class="reviews__photo">
+                        <img class="reviews__img" src="img/reviews/review-1.jpg" alt="">
+                    </div>
+                    <div class="reviews__content">
+                        <div class="reviews__text">There are many variations of passages of Lorem Ipsum available.</div>
+                        <div class="reviews__author">Susan Sims, Interaction Designer at XYZ</div>
+                    </div>
+
+                </div>
+                </div>
+
+            </div> <!--swiper-wrapper-->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-pagination"></div>
+
+
+        </div> <!--swiper-->
+    </div> <!-- Container -->
+</div> <!-- Reviews -->
+
+
+<!---------------------------- Download ---------------------------------------->
+<div class="download" id="download">
+    <div class="container">
+        <h3 class="download__title">Are you ready to start? Downdoad Now For Free!</h3>
+        <div class="download__text">
+            <p>There are many variations of passages</p>
+        </div>
+        <a class="btn btn--red btn--long" href="#">Download Here</a>
+    </div>
+</div>
+
+
+<!---------------------------- Footer ---------------------------------------->
+<footer class="footer">
+    <div class="container">
+        <div class="footer__inner">
+
+            <div class="footer__block">
+                <h4 class="footer__title">Location</h4>
+                <address class="footer__address">
+                    <p>3481 Melrose Place <br> Beverly Hills, CA 90210</p>
+                </address>
+            </div>
+
+            <div class="footer__block">
+                <h4 class="footer__title">Share with Love</h4>
+                <div class="social social--footer">
+                    <a class="social__item" href="#" target="_blank">
+                        <svg class="social__icon">
+                            <use xlink:href="#facebook"></use>
+                        </svg>
+                    </a>
+
+                    <a class="social__item" href="#" target="_blank">
+                        <svg class="social__icon">
+                            <use xlink:href="#twitter"></use>
+                        </svg>
+                    </a>
+
+                    <a class="social__item" href="#" target="_blank">
+                        <svg class="social__icon">
+                            <use xlink:href="#linkedin"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer__block">
+                <h4 class="footer__title">About ActiveBox</h4>
+                <div class="footer__text">
+                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
+                </div>
+            </div>
+
+        </div> <!-- Footer__inner -->
+    </div> <!-- Container -->
+    <div class="copyright">
+       <div class="container">
+           <div class="copyright__text">
+               <div>Copyright © 2015 ActiveBox. All Rights Reserved</div>
+               <div>Made <span>by Kamal Chaneman</span></div>
+           </div>
+       </div>
+    </div>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>
